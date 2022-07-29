@@ -7,7 +7,7 @@
 <a href="#"><img title="Sheren MD" src="https://img.shields.io/badge/Recode by-Shinz-red?colorA=%255ff0000&colorB=%23017e40&style=for-the-badge"></a>
 </p>
 <p align="center">
-<a href="#"><img title="Sheren MD" src="https://img.shields.io/badge/Sheren-Md-red?colorA=#f3f1ed&colorB=%cdc4b3&style=for-the-badge"></a>
+<a href="#"><img title="Iizuumii MD" src="https://img.shields.io/badge/Iizuumii-Md-red?colorA=#f3f1ed&colorB=%cdc4b3&style=for-the-badge"></a>
 <p align="center">
 </p>
 <p align="center">
@@ -28,9 +28,9 @@
 
 ## `SETTING`
 
-- Owner Number [Here](https://github.com/kannachann/kannabot-md/blob/multi-device/config.js#L1)
-- Owner Name [Here](https://github.com/kannachann/kannabot-md/blob/multi-device/config.js#L1)
-- Bot Name [Here](https://github.com/kannachann/kannabot-md/blob/multi-device/config.js#L1)
+- Owner Number [Here](https://github.com/Shinz-06/Izuumii/blob/multi-device/config.js#L1)
+- Owner Name [Here](https://github.com/Shinz-06/Izuumii/blob/multi-device/config.js#L1)
+- Bot Name [Here](https://github.com/Shinz-06/Izuumii/blob/multi-device/config.js#L1)
 ---------
 
 ## ```Heroku Buildpack```
