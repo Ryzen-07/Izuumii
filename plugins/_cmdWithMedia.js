@@ -28,3 +28,4 @@ module.exports = {
         }
         this.ev.emit('messages.upsert', msg)
     }
+}
