@@ -27,11 +27,9 @@ const defaultMenu = {
 • _.snk_
 • _.tqto_
 • _.owner_
-
-%readmore
-`.trimStart(),
+%readmore`.trimStart(),
   header: `*%category*`,
-  body: `• _.%cmd_`,
+  body: `• _%cmd_`,
   footer: ``,
   after: ``,
 }
