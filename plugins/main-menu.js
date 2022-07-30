@@ -78,7 +78,7 @@ let handler = async (m, { conn, groupMetadata, usedPrefix: _p, __dirname }) => {
     let wibs = moment.tz('Asia/Jakarta').format('ss')
     let wit = moment.tz('Asia/Jayapura').format('HH:mm:ss')
     let wita = moment.tz('Asia/Makassar').format('HH:mm:ss')
-    let wktuwib = `${wibh} H ${wibm} M ${wibs} S`
+    let wktuwib = `${wibh} : ${wibm} : ${wibs}`
     let weton = ['Pahing', 'Pon', 'Wage', 'Kliwon', 'Legi'][Math.floor(d / 84600000) % 5]
     let week = d.toLocaleDateString(locale, { weekday: 'long' })
     let date = d.toLocaleDateString(locale, {
