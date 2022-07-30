@@ -29,7 +29,7 @@ handler.all = async function (m) {
         ]
         
 		// ucapan ini mah
-		global.ucapan = ucapan()
+		global.ucapan = wish()
 		
 		// pesan sementara
 		global.ephemeral = '86400' // 86400 = 24jam, kalo ingin di hilangkan ganti '86400' jadi 'null' atau ''
@@ -209,22 +209,26 @@ global.fakefb = {
 
 export default handler 
 
-function ucapan() {
-    const time = moment.tz('Asia/Jakarta').format('HH')
-    let res = "Selamat malam 🌙"
-    if (time >= 4) {
-        res = "Selamat pagi 🌄"
-    }
-    if (time > 10) {
-        res = "Selamat siang ☀️"
-    }
-    if (time >= 15) {
-        res = "Selamat sore 🌅"
-    }
-    if (time >= 18) {
-        res = "Selamat malam 🌙"
-    }
-    return res
+function wish() {
+    let wishloc = ''
+  const time = moment.tz('Asia/Kolkata').format('HH')
+  wishloc = ('Hi')
+  if (time >= 0) {
+    wishloc = ('Night Rider')
+  }
+  if (time >= 4) {
+    wishloc = ('Good Morning')
+  }
+  if (time >= 12) {
+    wishloc = ('Good Afternoon')
+  }
+  if (time >= 16) {
+    wishloc = ('️Good Evening')
+  }
+  if (time >= 23) {
+    wishloc = ('Night Rider')
+  }
+  return wishloc
 }
 
 function pickRandom(list) {
