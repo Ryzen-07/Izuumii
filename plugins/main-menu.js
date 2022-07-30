@@ -162,7 +162,7 @@ let handler = async (m, { conn, groupMetadata, usedPrefix: _p, __dirname }) => {
       readmore: readMore
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
-    conn.sendHydrated(m.chat, text.trim(), wm2, thumbloc.getRandom(), sgc, 'Join Here', null, null, [
+    conn.sendHydrated(m.chat, text.trim(), wm, thumbloc.getRandom(), sgc, 'Join Here', null, null, [
       ['Owner', '.owner'],
       ['Dashboard', '.dashboard']
     ], m, {asLocation: true})
