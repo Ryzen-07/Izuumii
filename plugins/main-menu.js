@@ -62,8 +62,6 @@ let handler = async (m, { conn, groupMetadata, usedPrefix: _p, __dirname }) => {
       }
      }
      let math = max - xp
-     let res = JSON.parse(readFileSync('./json/emoji.json'))
-     let em = res.emoji
     let totalfeatures = Object.values(global.plugins).filter(
     (v) => v.help && v.tags
   ).length;
