@@ -12,7 +12,7 @@ const defaultMenu = {
 *Money* : %money
 *Level* :%level
 *Role* : %role
-*Xp* : TOTAL %exp ( %xp4levelup )
+*Xp* : TOTAL %exp ( %xp4levelup Xp For Levelup )
 
 *ABOUT*
 *Tanggal* : %week, %date
@@ -27,6 +27,7 @@ const defaultMenu = {
 • _.snk_
 • _.tqto_
 • _.owner_
+
 %readmore
 `.trimStart(),
   header: `*%category*`,
@@ -78,7 +79,7 @@ let handler = async (m, { conn, groupMetadata, usedPrefix: _p, __dirname }) => {
     let wibs = moment.tz('Asia/Jakarta').format('ss')
     let wit = moment.tz('Asia/Jayapura').format('HH:mm:ss')
     let wita = moment.tz('Asia/Makassar').format('HH:mm:ss')
-    let wktuwib = `${wibh} : ${wibm} : ${wibs}`
+    let wktuwib = `${wibh}:${wibm}:${wibs}`
     let weton = ['Pahing', 'Pon', 'Wage', 'Kliwon', 'Legi'][Math.floor(d / 84600000) % 5]
     let week = d.toLocaleDateString(locale, { weekday: 'long' })
     let date = d.toLocaleDateString(locale, {
@@ -159,13 +160,13 @@ let handler = async (m, { conn, groupMetadata, usedPrefix: _p, __dirname }) => {
       totalexp: exp,
       xp4levelup: max - exp,
       github: _package.homepage ? _package.homepage.url || _package.homepage : '[unknown github url]',
-      level, totalfeatures, limit, name, weton, week, date, dateIslamic, time, totalreg, rtotalreg, role, wib, wibh, wibs, wibm, wktuwib,
+      level, totalfeatures, limit, name, weton, week, date, dateIslamic, time, totalreg, rtotalreg, role, wib, wibh, wibs, wibm, wktuwib, money,
       readmore: readMore
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
-    conn.sendHydrated(m.chat, text.trim(), wm, thumbloc.getRandom(), sgc, 'Join Here', null, null, [
-      ['🎀 Menu', '.menu'],
-      ['🪄 Owner', '.owner']
+    conn.sendHydrated(m.chat, text.trim(), wm2, thumbloc.getRandom(), sgc, 'Join Here', null, null, [
+      ['Owner', '.owner'],
+      ['Dashboard', '.dashboard']
     ], m, {asLocation: true})
   } catch (e) {
     conn.reply(m.chat, 'Maaf, menu sedang error', m)
