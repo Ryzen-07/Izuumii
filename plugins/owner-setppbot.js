@@ -10,7 +10,8 @@ let handler = async (m, { conn, args }) => {
 	}
     }
 handler.help = ['setppbot']
+handler.tags = ['owner']
 handler.command = /^(setppbot)$/i
-handler.owner = true
+handler.rowner = true
 
 export default handler
