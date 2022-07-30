@@ -163,10 +163,10 @@ let handler = async (m, { conn, groupMetadata, usedPrefix: _p, __dirname }) => {
       readmore: readMore
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
-    conn.sendHydrated(m.chat, text.trim(), wm, thumbloc.getRandom(), sgc, 'Join Here', [
+    conn.sendHydrated(m.chat, text.trim(), wm, thumbloc.getRandom(), sgc, 'Join Here', null, null, [
       ['🎀 Menu', '.menu'],
       ['🪄 Owner', '.owner']
-    ], {asLocation: true})
+    ], m, {asLocation: true})
   } catch (e) {
     conn.reply(m.chat, 'Maaf, menu sedang error', m)
     throw e
